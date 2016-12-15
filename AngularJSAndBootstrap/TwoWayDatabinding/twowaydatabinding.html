@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/css/styles.css" rel="stylesheet" />
+</head>
+<body ng-controller="customerController as cst">
+
+    <div class="container jumbotron">
+        <h1 class="text-center">Two Way Data Binding</h1>
+        <div class="row top-buffer">
+
+            <div class="col-md-2">First Name: </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="First Name" ng-model="cst.customer.FirstName" />
+            </div>
+        </div>
+
+        <div class="row top-buffer">
+
+            <div class="col-md-2">Last Name: </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="Last Name" ng-model="cst.customer.LastName" />
+            </div>
+        </div>
+        <div class="row top-buffer">
+
+            <div class="col-md-2">Gender: </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="Gender" ng-model="cst.customer.Gender" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row top-buffer">
+
+            <div class="col-md-2">First Name: </div>
+            <div class="col-md-6">{{cst.customer.FirstName}}</div>
+        </div>
+        <div class="row top-buffer">
+
+            <div class="col-md-2">Last Name: </div>
+            <div class="col-md-6">{{cst.customer.LastName}}</div>
+        </div>
+        <div class="row top-buffer">
+
+            <div class="col-md-2">Gender: </div>
+            <div class="col-md-6">{{cst.customer.Gender}}</div>
+        </div>
+
+    </div>
+
+    <script src="Scripts/angular.min.js"></script>
+
+    <script src="Scripts/src/twowaydatabinding/app.js"></script>
+    <script src="Scripts/src/twowaydatabinding/customerController.js"></script>
+</body>
+</html>
